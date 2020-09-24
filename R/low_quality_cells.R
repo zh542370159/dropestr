@@ -22,7 +22,7 @@ Center <- function(x, func=mean) {
 #' @export
 Normalize <- function(x, func=stats::sd) {
   normalizer <- apply(x, 2, func)
-  if (any(abs(normalizer) < 1e-10)) {
+  if (any(abs(normalizer[!is.na(normalizer)]) < 1e-10)) {
     warning("Normalizer is too small")
   }
   return(t(t(x) / normalizer))
