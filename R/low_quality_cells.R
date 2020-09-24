@@ -94,6 +94,7 @@ PrepareLqCellsData <- function(count.matrix, aligned.reads.per.cell, total.umis.
 
   if (!is.null(mitochondrion.fraction)) {
     tech.features$MitochondrionFraction <- mitochondrion.fraction[analyzed.cbs]
+    tech.features$MitochondrionFraction[is.na(tech.features$MitochondrionFraction)] <- 0
   }
 
   tech.features <- tech.features[,apply(tech.features, 2, function(col) any(abs(col) > 1e-10))]
