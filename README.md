@@ -12,7 +12,7 @@ Please see the vignettes:
 ## Installation
 
 ```r
-devtools::install_github('kharchenkolab/dropestr')
+devtools::install_github('zh542370159/dropestr')
 ```
 
 ## Cell Filtration Procedure
